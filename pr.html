@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atharv Sunil Vaskar | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+
+    /* =========================================
+       RESET
+    ========================================= */
+
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+
+    html{
+        scroll-behavior:smooth;
+    }
+
+    body{
+        font-family:'Inter',sans-serif;
+        background:#020617;
+        color:white;
+        overflow-x:hidden;
+    }
+
+    /* =========================================
+       LIVE PROFESSIONAL BG
+    ========================================= */
+
+    #bgCanvas{
+        position:fixed;
+        inset:0;
+        width:100%;
+        height:100%;
+        z-index:-10;
+
+        background:
+        radial-gradient(circle at top left,#1e1b4b 0%,#020617 35%),
+        radial-gradient(circle at bottom right,#082f49 0%,#020617 35%),
+        #020617;
+    }
+
+    /* =========================================
+       NAVBAR
+    ========================================= */
+
+    nav{
+
+        position:fixed;
+        top:20px;
+        left:50%;
+        transform:translateX(-50%);
+
+        width:92%;
+        max-width:1200px;
+
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+
+        padding:16px 28px;
+
+        border-radius:22px;
+
+        background:rgba(8,15,30,0.45);
+
+        backdrop-filter:blur(18px);
+
+        border:1px solid rgba(255,255,255,0.08);
+
+        z-index:1000;
+    }
+
+    .logo{
+
+        font-size:1rem;
+        font-weight:800;
+        letter-spacing:1px;
+
+        background:linear-gradient(to right,#ffffff,#67e8f9);
+
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+    }
+
+    .nav-links{
+        display:flex;
+        gap:28px;
+    }
+
+    .nav-links a{
+
+        color:#94a3b8;
+
+        text-decoration:none;
+
+        transition:0.3s;
+
+        font-size:0.95rem;
+    }
+
+    .nav-links a:hover{
+        color:white;
+    }
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .hero{
+
+        min-height:100vh;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        text-align:center;
+
+        padding:140px 20px 80px;
+    }
+
+    .hero-content{
+        max-width:900px;
+    }
+
+    .badge{
+
+        display:inline-flex;
+        align-items:center;
+
+        padding:10px 18px;
+
+        border-radius:999px;
+
+        background:rgba(255,255,255,0.05);
+
+        border:1px solid rgba(255,255,255,0.08);
+
+        color:#cbd5e1;
+
+        font-size:0.9rem;
+
+        margin-bottom:30px;
+    }
+
+    .hero h1{
+
+        font-size:clamp(3.5rem,8vw,7rem);
+
+        line-height:1;
+
+        font-weight:900;
+
+        margin-bottom:24px;
+
+        background:linear-gradient(to right,#ffffff,#c4b5fd,#67e8f9);
+
+        -webkit-background-clip:text;
+        -webkit-text-fill-color:transparent;
+    }
+
+    .hero h2{
+
+        font-size:1.5rem;
+
+        color:#e2e8f0;
+
+        margin-bottom:20px;
+    }
+
+    .hero p{
+
+        color:#94a3b8;
+
+        max-width:760px;
+
+        margin:auto;
+
+        line-height:1.9;
+
+        font-size:1.05rem;
+    }
+
+    .hero-buttons{
+
+        margin-top:40px;
+
+        display:flex;
+        justify-content:center;
+
+        gap:18px;
+
+        flex-wrap:wrap;
+    }
+
+    .btn{
+
+        padding:15px 30px;
+
+        border-radius:16px;
+
+        text-decoration:none;
+
+        font-weight:700;
+
+        transition:0.3s;
+    }
+
+    .btn-primary{
+
+        background:linear-gradient(to right,#7c3aed,#06b6d4);
+
+        color:white;
+
+        box-shadow:0 10px 40px rgba(124,58,237,0.35);
+    }
+
+    .btn-primary:hover{
+        transform:translateY(-4px) scale(1.03);
+    }
+
+    .btn-outline{
+
+        background:rgba(255,255,255,0.04);
+
+        border:1px solid rgba(255,255,255,0.08);
+
+        color:white;
+    }
+
+    .btn-outline:hover{
+        transform:translateY(-4px);
+    }
+
+    /* =========================================
+       SECTIONS
+    ========================================= */
+
+    section{
+
+        width:92%;
+        max-width:1200px;
+
+        margin:auto;
+
+        padding:120px 0;
+    }
+
+    .section-title{
+
+        text-align:center;
+
+        margin-bottom:70px;
+    }
+
+    .section-title span{
+
+        color:#67e8f9;
+
+        text-transform:uppercase;
+
+        font-size:0.9rem;
+
+        letter-spacing:1px;
+
+        font-weight:700;
+    }
+
+    .section-title h3{
+
+        margin-top:12px;
+
+        font-size:clamp(2rem,5vw,3.5rem);
+    }
+
+    .section-title p{
+
+        margin-top:14px;
+
+        color:#94a3b8;
+    }
+
+    /* =========================================
+       ABOUT
+    ========================================= */
+
+    .about-card{
+
+        background:rgba(15,23,42,0.45);
+
+        backdrop-filter:blur(16px);
+
+        border:1px solid rgba(255,255,255,0.06);
+
+        border-radius:30px;
+
+        padding:45px;
+
+        line-height:2;
+
+        color:#dbeafe;
+    }
+
+    .ai-banner{
+
+        margin-top:35px;
+
+        padding:35px;
+
+        border-radius:24px;
+
+        background:linear-gradient(
+        135deg,
+        rgba(124,58,237,0.20),
+        rgba(6,182,212,0.10)
+        );
+
+        border:1px solid rgba(255,255,255,0.08);
+    }
+
+    .ai-banner h4{
+
+        font-size:1.4rem;
+
+        margin-bottom:16px;
+    }
+
+    /* =========================================
+       GRID
+    ========================================= */
+
+    .grid{
+
+        display:grid;
+
+        grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+        gap:30px;
+    }
+
+    /* =========================================
+       CARDS
+    ========================================= */
+
+    .card{
+
+        background:rgba(15,23,42,0.45);
+
+        backdrop-filter:blur(16px);
+
+        border:1px solid rgba(255,255,255,0.06);
+
+        border-radius:28px;
+
+        overflow:hidden;
+
+        transition:0.4s;
+        
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card:hover{
+
+        transform:translateY(-8px);
+
+        border-color:rgba(103,232,249,0.3);
+    }
+
+    .card-content{
+        padding:35px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .icon{
+
+        width:70px;
+        height:70px;
+
+        border-radius:20px;
+
+        display:flex;
+        align-items:center;
+        justify-content:center;
+
+        font-size:1.7rem;
+
+        margin-bottom:24px;
+
+        background:linear-gradient(to bottom right,#7c3aed,#06b6d4);
+    }
+
+    .card h4{
+
+        font-size:1.35rem;
+
+        margin-bottom:14px;
+    }
+
+    .card p{
+
+        color:#94a3b8;
+
+        line-height:1.8;
+    }
+
+    /* =========================================
+       TAGS
+    ========================================= */
+
+    .tags{
+
+        margin-top:22px;
+        margin-bottom:25px; /* <-- FIXED SPACING HERE */
+
+        display:flex;
+        flex-wrap:wrap;
+
+        gap:10px;
+    }
+
+    .tag{
+
+        padding:8px 14px;
+
+        border-radius:999px;
+
+        background:rgba(255,255,255,0.05);
+
+        border:1px solid rgba(255,255,255,0.08);
+
+        color:#dbeafe;
+
+        font-size:0.82rem;
+    }
+
+    /* =========================================
+       PROJECTS
+    ========================================= */
+
+    .project-image{
+
+        width:100%;
+        height:230px;
+
+        object-fit:cover;
+    }
+
+    .project-content{
+        padding:28px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+    }
+
+    .project-top{
+
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+
+        margin-bottom:16px;
+    }
+
+    .project-btn{
+
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        margin-top:auto;
+
+        width:100%;
+
+        padding:14px;
+
+        border-radius:16px;
+
+        text-decoration:none;
+
+        font-weight:700;
+
+        background:linear-gradient(to right,#7c3aed,#06b6d4);
+
+        color:white;
+
+        transition:0.3s;
+    }
+
+    .project-btn:hover{
+        transform:translateY(-3px);
+    }
+
+    .wip{
+
+        background:#f59e0b;
+
+        padding:6px 10px;
+
+        border-radius:999px;
+
+        font-size:0.72rem;
+
+        font-weight:700;
+    }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+
+    footer{
+
+        padding:90px 20px;
+
+        text-align:center;
+
+        border-top:1px solid rgba(255,255,255,0.06);
+
+        margin-top:80px;
+    }
+
+    footer h3{
+
+        font-size:2.5rem;
+
+        margin-bottom:18px;
+    }
+
+    footer p{
+        color:#94a3b8;
+    }
+
+    .footer-links{
+
+        margin-top:32px;
+
+        display:flex;
+        justify-content:center;
+
+        gap:18px;
+
+        flex-wrap:wrap;
+    }
+
+    .footer-links a{
+
+        text-decoration:none;
+
+        color:white;
+
+        padding:14px 24px;
+
+        border-radius:16px;
+
+        background:rgba(255,255,255,0.05);
+
+        border:1px solid rgba(255,255,255,0.08);
+
+        transition:0.3s;
+    }
+
+    .footer-links a:hover{
+
+        transform:translateY(-4px);
+
+        background:linear-gradient(to right,#7c3aed,#06b6d4);
+    }
+
+    /* =========================================
+       RESPONSIVE
+    ========================================= */
+
+    @media(max-width:768px){
+
+        nav{
+            padding:14px 18px;
+        }
+
+        .nav-links{
+            gap:14px;
+        }
+
+        .hero-buttons{
+            flex-direction:column;
+            align-items:center;
+        }
+
+        .btn{
+            width:100%;
+            max-width:320px;
+        }
+
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <canvas id="bgCanvas"></canvas>
+
+    <nav>
+
+        <div class="logo">
+            PORTFOLIO.
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+    </nav>
+
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🚀 Software • Game • Web Developer
+            </div>
+
+            <h1>
+                Atharv Sunil<br>
+                Vaskar
+            </h1>
+
+            <h2>
+                Building Modern Digital Experiences
+            </h2>
+
+            <p>
+                Passionate developer focused on immersive games,
+                AI-powered solutions, premium web platforms,
+                and modern mobile applications with sleek UI/UX.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    View Projects
+                </a>
+
+                <a href="#contact" class="btn btn-outline">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <section id="about">
+
+        <div class="section-title">
+
+            <span>Introduction</span>
+
+            <h3>About Me</h3>
+
+            <p>
+                Developer focused on performance, design and innovation.
+            </p>
+
+        </div>
+
+        <div class="about-card">
+
+            <p>
+                I am a B.Sc. IT graduate from Mumbai University with expertise in
+                full-stack web development, Android app development, multiplayer systems,
+                and game development. I enjoy building scalable and visually polished
+                digital products with smooth performance and modern design.
+            </p>
+
+            <div class="ai-banner">
+
+                <h4>
+                    ⚡ AI + Developer Workflow
+                </h4>
+
+                <p>
+                    I combine AI-assisted workflows with real development experience
+                    to rapidly prototype, optimize, and deploy projects with premium quality.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="skills">
+
+        <div class="section-title">
+
+            <span>Expertise</span>
+
+            <h3>Core Skills</h3>
+
+            <p>
+                Technologies and platforms I work with.
+            </p>
+
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <div class="card-content">
+
+                    <div class="icon">
+                        🎮
+                    </div>
+
+                    <h4>Game Development</h4>
+
+                    <p>
+                        Creating immersive gameplay systems,
+                        optimized rendering and smooth experiences.
+                    </p>
+
+                    <div class="tags">
+
+                        <div class="tag">Unity</div>
+                        <div class="tag">Unreal Engine</div>
+                        <div class="tag">C# / C++</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-content">
+
+                    <div class="icon">
+                        💻
+                    </div>
+
+                    <h4>Web Development</h4>
+
+                    <p>
+                        Building responsive applications with scalable backend systems.
+                    </p>
+
+                    <div class="tags">
+
+                        <div class="tag">Node.js</div>
+                        <div class="tag">MongoDB</div>
+                        <div class="tag">HTML/CSS/JS</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="card-content">
+
+                    <div class="icon">
+                        📱
+                    </div>
+
+                    <h4>Mobile Development</h4>
+
+                    <p>
+                        Developing Android applications with sleek UI and Firebase integration.
+                    </p>
+
+                    <div class="tags">
+
+                        <div class="tag">Android Studio</div>
+                        <div class="tag">Java</div>
+                        <div class="tag">Firebase</div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="projects">
+
+        <div class="section-title">
+
+            <span>Portfolio</span>
+
+            <h3>Featured Projects</h3>
+
+            <p>
+                Selected projects showcasing development and design skills.
+            </p>
+
+        </div>
+
+        <div class="grid">
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&q=80&w=900"
+                class="project-image" alt="VentureVista">
+
+                <div class="project-content">
+
+                    <div class="project-top">
+                        <h4>VentureVista</h4>
+                    </div>
+
+                    <p>
+                        Modern flight booking platform with secure backend architecture.
+                    </p>
+
+                    <div class="tags">
+                        <div class="tag">Full Stack</div>
+                        <div class="tag">MongoDB</div>
+                    </div>
+
+                    <a href="https://flight-booking-website-atharv-vaskar-jod.onrender.com/" target="_blank" class="project-btn">
+                        View Live Project
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&q=80&w=900"
+                class="project-image" alt="Business Game">
+
+                <div class="project-content">
+
+                    <div class="project-top">
+                        <h4>Multiplayer Business Game</h4>
+                    </div>
+
+                    <p>
+                        Browser-based multiplayer strategy game with real-time sync.
+                    </p>
+
+                    <div class="tags">
+                        <div class="tag">Web Game</div>
+                        <div class="tag">Realtime</div>
+                    </div>
+
+                    <a href="https://business-game-g5lz.onrender.com/" target="_blank" class="project-btn">
+                        Play Live
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1587145820266-a5951ee6f620?auto=format&fit=crop&q=80&w=900"
+                class="project-image" alt="Calculator App">
+
+                <div class="project-content">
+
+                    <div class="project-top">
+                        <h4>iOS-Style Calculator App</h4>
+                    </div>
+
+                    <p>
+                        A mobile application built natively for Android, designed to mirror the minimalist aesthetic of iOS.
+                    </p>
+
+                    <div class="tags">
+                        <div class="tag">Android Studio</div>
+                        <div class="tag">Java</div>
+                    </div>
+
+                    <a href="Calculator.apk" download class="project-btn">
+                        Download APK
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?auto=format&fit=crop&q=80&w=900"
+                class="project-image" alt="Cube Runner 3D">
+
+                <div class="project-content">
+
+                    <div class="project-top">
+                        <h4>Cube Runner 3D</h4>
+                    </div>
+
+                    <p>
+                        A high-graphics game project optimized for 120 FPS exploring advanced rendering and mechanics.
+                    </p>
+
+                    <div class="tags">
+                        <div class="tag">Unreal Engine</div>
+                        <div class="tag">Game Design</div>
+                    </div>
+
+                    <a href="Boss Runner 3D.apk" download class="project-btn">
+                        Download APK
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=900"
+                class="project-image" alt="AI Chatbot">
+
+                <div class="project-content">
+
+                    <div class="project-top">
+                        <h4>AI Chatbot</h4>
+                        <div class="wip">
+                            WIP
+                        </div>
+                    </div>
+
+                    <p>
+                        AI-powered chatbot platform for web and mobile experiences.
+                    </p>
+
+                    <div class="tags">
+                        <div class="tag">AI Integration</div>
+                        <div class="tag">Web App</div>
+                    </div>
+
+                    <a href="#" class="project-btn">
+                        Coming Soon
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <img
+                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=900"
+                class="project-image" alt="Patient Care App">
+
+                <div class="project-content">
+
+                    <div class="project-top">
+                        <h4>Patient Care App</h4>
+                        <div class="wip">
+                            WIP
+                        </div>
+                    </div>
+
+                    <p>
+                        Android app designed to manage caregiver attendance, presence, and client feedback synced via Firebase.
+                    </p>
+
+                    <div class="tags">
+                        <div class="tag">Android Studio</div>
+                        <div class="tag">Firebase</div>
+                        <div class="tag">Role-Based UI</div>
+                    </div>
+
+                    <a href="#" class="project-btn">
+                        Coming Soon
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer id="contact">
+
+        <h3>
+            Let's Build Something Amazing
+        </h3>
+
+        <p>
+            Open for collaborations, freelance work and exciting projects.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="mailto:vaskaratharv2005@gmail.com">
+                Email
+            </a>
+
+            <a href="https://github.com/JODDDD13" target="_blank" rel="noopener noreferrer">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/atharv-vaskar-721b16343/" target="_blank" rel="noopener noreferrer">
+                LinkedIn
+            </a>
+
+        </div>
+
+    </footer>
+
+    <script>
+
+    /* =========================================
+       PROFESSIONAL LIVE BG
+    ========================================= */
+
+    const canvas = document.getElementById("bgCanvas");
+    const ctx = canvas.getContext("2d");
+
+    let w = canvas.width = window.innerWidth;
+    let h = canvas.height = window.innerHeight;
+
+    window.addEventListener("resize",()=>{
+
+        w = canvas.width = window.innerWidth;
+        h = canvas.height = window.innerHeight;
+
+    });
+
+    /* ORBS */
+
+    const orbs = [];
+
+    for(let i=0;i<20;i++){
+
+        orbs.push({
+
+            x:Math.random()*w,
+            y:Math.random()*h,
+
+            radius:Math.random()*240 + 120,
+
+            dx:(Math.random()-0.5)*0.12,
+            dy:(Math.random()-0.5)*0.12,
+
+            hue:Math.random() > 0.5 ? 260 : 190,
+
+            alpha:Math.random()*0.12 + 0.04
+        });
+    }
+
+    /* PARTICLES */
+
+    const particles = [];
+
+    for(let i=0;i<130;i++){
+
+        particles.push({
+
+            x:Math.random()*w,
+            y:Math.random()*h,
+
+            size:Math.random()*2 + 0.5,
+
+            speedX:(Math.random()-0.5)*0.25,
+            speedY:(Math.random()-0.5)*0.25,
+
+            opacity:Math.random()*0.5 + 0.2
+        });
+    }
+
+    /* ANIMATION */
+
+    function animate(){
+
+        ctx.clearRect(0,0,w,h);
+
+        ctx.fillStyle = "rgba(2,6,23,0.08)";
+        ctx.fillRect(0,0,w,h);
+
+        /* ORBS */
+
+        orbs.forEach(orb=>{
+
+            orb.x += orb.dx;
+            orb.y += orb.dy;
+
+            if(orb.x < -200 || orb.x > w+200) orb.dx *= -1;
+            if(orb.y < -200 || orb.y > h+200) orb.dy *= -1;
+
+            const gradient = ctx.createRadialGradient(
+
+                orb.x,
+                orb.y,
+                0,
+
+                orb.x,
+                orb.y,
+                orb.radius
+            );
+
+            gradient.addColorStop(
+                0,
+                `hsla(${orb.hue},100%,60%,${orb.alpha})`
+            );
+
+            gradient.addColorStop(
+                1,
+                "transparent"
+            );
+
+            ctx.beginPath();
+
+            ctx.fillStyle = gradient;
+
+            ctx.arc(
+                orb.x,
+                orb.y,
+                orb.radius,
+                0,
+                Math.PI*2
+            );
+
+            ctx.fill();
+
+        });
+
+        /* PARTICLES */
+
+        particles.forEach(p=>{
+
+            p.x += p.speedX;
+            p.y += p.speedY;
+
+            if(p.x < 0) p.x = w;
+            if(p.x > w) p.x = 0;
+
+            if(p.y < 0) p.y = h;
+            if(p.y > h) p.y = 0;
+
+            ctx.beginPath();
+
+            ctx.fillStyle = `rgba(255,255,255,${p.opacity})`;
+
+            ctx.arc(
+                p.x,
+                p.y,
+                p.size,
+                0,
+                Math.PI*2
+            );
+
+            ctx.fill();
+
+        });
+
+        /* LINES */
+
+        ctx.lineWidth = 0.5;
+
+        for(let i=0;i<particles.length;i++){
+
+            for(let j=i;j<particles.length;j++){
+
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+
+                const dist = Math.sqrt(dx*dx + dy*dy);
+
+                if(dist < 110){
+
+                    ctx.strokeStyle =
+                    `rgba(120,180,255,${0.06 - dist/2000})`;
+
+                    ctx.beginPath();
+
+                    ctx.moveTo(
+                        particles[i].x,
+                        particles[i].y
+                    );
+
+                    ctx.lineTo(
+                        particles[j].x,
+                        particles[j].y
+                    );
+
+                    ctx.stroke();
+                }
+            }
+        }
+
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+
+    </script>
+
+</body>
+</html>
